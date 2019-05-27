@@ -1,13 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/activity_main"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_centerHorizontal="false"
+    android:layout_centerVertical="false"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
     android:paddingLeft="16dp"
-    android:paddingRight="16dp"
     android:paddingTop="16dp"
+    android:paddingRight="16dp"
     android:paddingBottom="16dp"
+    android:scrollbarStyle="outsideInset"
+    android:scrollbars="vertical"
     tools:context=".MainActivity">
-</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/holo_blue_dark"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="@string/title"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_eightball"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="100dp"
+            android:paddingBottom="30dp"
+            app:srcCompat="@drawable/ball1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp">
+
+        <Button
+            android:id="@+id/button_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/button_label" />
+    </RelativeLayout>
+</LinearLayout>
